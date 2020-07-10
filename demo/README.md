@@ -65,6 +65,16 @@ using this environment variable:
 DIGITALOCEAN_TOKEN
 ```
 
+For Azure you need to get an write token from the console and export it
+using this environment variable:
+
+```
+ARM_CLIENT_ID
+ARM_TENANT_ID
+ARM_CLIENT_SECRET
+ARM_SUBSCRIPTION_ID
+```
+
 ## Infrastructure
 
 First the clusters will be created, along with secrets to be used for OIDC
@@ -73,9 +83,8 @@ has dependant resources on the Google module, so the Google module must be
 created first.
 
 ```
+CLOUD=azure       make terraform_apply
 CLOUD=google       make terraform_apply
-CLOUD=amazon       make terraform_apply
-CLOUD=digitalocean make terraform_apply
 ```
 
 This will create each cluster and a Service Account to manage Google Cloud DNS

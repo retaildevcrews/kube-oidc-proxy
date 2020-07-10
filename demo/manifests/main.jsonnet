@@ -77,15 +77,10 @@ local apply_ca_issuer(ca_crt, ca_key, obj) =
       domain_part: '-gke',
       config: import './google-config.json',
     },
-    amazon: {
+    azure: {
       master: false,
-      domain_part: '-eks',
-      config: import './amazon-config.json',
-    },
-    digitalocean: {
-      master: false,
-      domain_part: '-dok',
-      config: import './digitalocean-config.json',
+      domain_part: '-aks',
+      config: import './azure-config.json',
     },
   },
 

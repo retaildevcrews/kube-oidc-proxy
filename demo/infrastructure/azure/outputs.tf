@@ -16,7 +16,7 @@ output "config" {
 }
 
 output "kubeconfig_command" {
-  value = "cd infrastructure/digitalocean/ && terraform output kubeconfig > $KUBECONFIG"
+  value = "cd infrastructure/azure/ && terraform output kubeconfig > $KUBECONFIG"
 }
 
 output "kubeconfig" {
